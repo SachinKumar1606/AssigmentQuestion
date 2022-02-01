@@ -1,4 +1,4 @@
-package com.Week3_Day2;
+
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -11,7 +11,7 @@ import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
 
-public class GroupByDemo {
+public class GroupsOfGroups {
     public static WebDriver driver;
     SoftAssert soft= new SoftAssert();
     @BeforeSuite (groups = {"Run"})
