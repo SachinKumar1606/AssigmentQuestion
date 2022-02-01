@@ -1,4 +1,4 @@
-package com.dataDriven;
+
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class First {
+public class ReadAndWriteExcel {
     WebDriver driver;
     String setup(String user, String pass){
         WebDriverManager.chromedriver().setup();
