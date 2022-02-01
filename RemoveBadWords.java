@@ -1,4 +1,4 @@
-package com.Practice;
+
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class AssignmnetWeek5 {
+public class RemoveBadWords {
     ArrayList<String> collection = new ArrayList<>();
     void collectData() throws IOException {
         String path = System.getProperty("user.dir") + "/TestData/testData.xlsx";
