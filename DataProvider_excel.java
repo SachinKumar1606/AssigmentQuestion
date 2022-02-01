@@ -1,4 +1,4 @@
-package AssignmnetWeek3;
+
 
 import com.dataDriven.DataTestNG;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class Day1 {
+public class DataProvider_excel {
 
     public int a,b;
     FileInputStream file;
