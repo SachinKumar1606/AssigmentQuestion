@@ -1,4 +1,3 @@
-package Driver;
 
 import java.util.List;
 
@@ -9,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Assignment_1 {
+public class Xpath_Ad {
 	WebDriver driver;
 	void setup() throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
