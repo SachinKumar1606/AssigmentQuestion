@@ -1,17 +1,8 @@
-
-
 import com.dataDriven.DataTestNG;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-
+import org.apache.poi.xssf.usermodel.*;
+import org.openqa.selenium.*;
+import org.testng.*;
 import java.io.FileInputStream;
 import java.io.IOException;
 
@@ -24,7 +15,6 @@ public class DataProvider_excel {
 
     @DataProvider(name="DaTa")
     public Object[][] testData() throws IOException {
-
         String path = System.getProperty("user.dir") + "/TestData/Login.xlsx";
         System.out.println(path);
         //Reading the Excel file
@@ -33,26 +23,25 @@ public class DataProvider_excel {
         bk = new XSSFWorkbook(file);
         //Reading the sheet
         sh = bk.getSheetAt(0);
-
         a = sh.getLastRowNum();
         b = sh.getRow(0).getPhysicalNumberOfCells();
         int row = a;
         int col = b;
         System.out.println(row+"     "+col);
         Object[][] arr = new Object[row+1][2];
-        for (int i=1;i<=row;i++){
+        for (int i = 1; i <= row; i++){
             String data1 = sh.getRow(i).getCell(0).getStringCellValue();
             String data2 = sh.getRow(i).getCell(1).getStringCellValue();
-            arr[i][0]= data1;
+            arr[i][0] = data1;
             arr[i][1] = data2;
         }
-        arr[0][0]="standard_user";
-        arr[0][1]="secret_sauce";
+        arr[0][0] = "standard_user";
+        arr[0][1] = "secret_sauce";
         return arr;
     }
 
     @Test(dataProvider = "DaTa")
-    public void login(String name,String pass){
+    public void login(String name, String pass){
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -64,6 +53,5 @@ public class DataProvider_excel {
         String act = s.getText();
         driver.close();
         Assert.assertEquals(act,"PRODUCTS");
-
     }
 }
