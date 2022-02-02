@@ -5,9 +5,7 @@
         <groups>
             <run>
                 <include name="Run"/>
-
             </run>
-
         </groups>
         <classes>
             <class name="com.Week3_Day2.GroupByDemo">
@@ -22,16 +20,14 @@
     <groups>
             <run>
                 <include name="NotRun"/>
-
             </run>
-
         </groups>
         <classes>
             <class name="com.Week3_Day2.GroupByDemo">
-                                <methods>
-                                    <include name="logout"/>
-                                    <include name="check2"/>
-                                </methods>
+                <methods>
+                    <include name="logout"/>
+                    <include name="check2"/>
+                </methods>
             </class>
         </classes>
     </test>
