@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test name="Run">
+    <test name = "Run">
         <groups>
             <run>
                 <include name = "Run"/>
@@ -16,7 +16,7 @@
             </class>
         </classes>
     </test>
-    <test name="NotRun">
+    <test name = "NotRun">
     <groups>
             <run>
                 <include name = "NotRun"/>
