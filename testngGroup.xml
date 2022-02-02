@@ -4,14 +4,14 @@
     <test name="Run">
         <groups>
             <run>
-                <include name="Run"/>
+                <include name = "Run"/>
             </run>
         </groups>
         <classes>
             <class name="com.Week3_Day2.GroupByDemo">
                 <methods>
-                    <include name="login"/>
-                    <include name="check"/>
+                    <include name = "login"/>
+                    <include name = "check"/>
                 </methods>
             </class>
         </classes>
@@ -19,14 +19,14 @@
     <test name="NotRun">
     <groups>
             <run>
-                <include name="NotRun"/>
+                <include name = "NotRun"/>
             </run>
         </groups>
         <classes>
             <class name="com.Week3_Day2.GroupByDemo">
                 <methods>
-                    <include name="logout"/>
-                    <include name="check2"/>
+                    <include name = "logout"/>
+                    <include name = "check2"/>
                 </methods>
             </class>
         </classes>
