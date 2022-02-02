@@ -29,14 +29,13 @@ public class DataProvider_excel {
         int col = b;
         System.out.println(row+"     "+col);
         Object[][] arr = new Object[row+1][2];
-        for (int i = 1; i <= row; i++){
+        int ij = 0;
+        for (int i = 1; i <= row; i++, ij++){
             String data1 = sh.getRow(i).getCell(0).getStringCellValue();
             String data2 = sh.getRow(i).getCell(1).getStringCellValue();
-            arr[i][0] = data1;
-            arr[i][1] = data2;
+            arr[ij][0] = data1;
+            arr[ij][1] = data2;
         }
-        arr[0][0] = "standard_user";
-        arr[0][1] = "secret_sauce";
         return arr;
     }
 
